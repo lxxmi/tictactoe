@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Lato, Arial, Helevetica, serif;
+  font-size: 50px;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+.title {
+  margin-top: 1em;
+  font-size: 30px;
+  text-align: center;
+}
+.small {
+  margin: 0;
+  font-size: 18px;
+}
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+.board {
+  height: 300px;
+  width: 300px;
+  max-width: 70vw;
+  max-height: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.info-message {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.row {
+  flex: 1;
+  display: flex;
+}
+.box {
+  flex: 1;
+  background: #0f4c75;
+  color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box:not(.x):not(.o):hover {
+  background: #bbe1fa;
+  color: #222;
+  cursor: pointer;
+}
+.box.x:after,
+.board.x .box:not(.x):not(.o):hover:after {
+  content: "X";
+}
+.box.o:after,
+.board.o .box:not(.x):not(.o):hover:after {
+  content: "O";
+}
+.box.x,
+.box.o {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.board.avoid-clicks {
+  pointer-events: none;
+}
+.message-prompt {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fffdf9;
+  opacity: 0.95;
+  justify-content: center;
+  align-items: center;
+  color: #900c3f;
+  font-size: 5rem;
+  flex-direction: column;
+  font-size: 40px;
+}
+.message-prompt.show {
+  display: flex;
+}
+.messsage {
+  text-align: center;
+  margin: 20px 0;
+}
+.restart {
+  border-radius: 10px;
+  border: 0;
+  padding: 1em 2em;
+  font-size: 18px;
+  background: #900c3f;
+  color: #fff;
+  opacity: 1;
+  letter-spacing: 2px;
+}
+.restart:hover {
+  border: 0;
+  cursor: pointer;
+  color: #900c3f;
+  background: #fff;
+  border: 2px solid #900c3f;
+}
+button:focus {
+  outline: none;
+}
+@media (max-width: 300px) {
+  body {
+    font-size: 38px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool realtime multiplayer game">
+
+    <title>Tic Tac Toe</title>
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/6b4cd5dc-f28e-419d-81f2-dcf104051175%2Ftic-tac_toe-thumb-.jpg?v=1597240964716" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="title">
+      Tic-Tac-Toe
+      <p class="small">
+        X goes first. Choose wisely.
+      </p>
+    </div>
+    <div class="board-container ">      
+      <div class="board ">
+        <div class="row">
+          <div class="box" id="b1"></div>
+          <div class="box" id="b2"></div>
+          <div class="box" id="b3"></div>
+        </div>
+        <div class="row">
+          <div class="box" id="b4"></div>
+          <div class="box" id="b5"></div>
+          <div class="box" id="b6"></div>
+        </div>
+        <div class="row">
+          <div class="box" id="b7"></div>
+          <div class="box" id="b8"></div>
+          <div class="box" id="b9"></div>
+        </div>
+      </div>
+      <div class="info-message">
+        Waiting for opponent
+        </div>
+    </div>    
+    <div class="message-prompt">
+      <div class="message">
+      </div>
+      <button class="restart">Rematch</button>
+    </div>    
+  </body>
+</html>
