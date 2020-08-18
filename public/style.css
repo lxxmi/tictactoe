@@ -7,7 +7,6 @@
 }
 body {
   font-family: Lato, Arial, Helevetica, serif;
-  font-size: 50px;
   margin: 0;
   display: flex;
   height: 100vh;
@@ -22,11 +21,15 @@ a {
   font-size: 30px;
   text-align: center;
 }
+.title p{
+  color:#555;
+}
 .small {
   margin: 0;
   font-size: 18px;
 }
 .board-container {
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +48,7 @@ a {
 .info-message {
   margin-top: 10px;
   font-size: 20px;
+  text-align:center;
 }
 .row {
   flex: 1;
@@ -124,8 +128,14 @@ a {
 button:focus {
   outline: none;
 }
+.footer{
+  display:flex;
+  position:absolute;
+  bottom:0px;
+  margin-bottom:1em;
+}
 @media (max-width: 300px) {
-  body {
+.board-container {
     font-size: 38px;
   }
 }
